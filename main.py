@@ -1,6 +1,6 @@
 from sense_hat import SenseHat
-#import smileys #when on trinket.io
-from test.smiley import Smiley
+import smileys #when on trinket.io
+#from test.smiley import Smiley
 sense = SenseHat()
 sense.clear()
 
@@ -23,7 +23,7 @@ Y, Y, Y, B, B, Y, Y, Y,
 B, Y, B, Y, Y, B, Y, B, 
 ]
 
-sad_face = smile_face
+sad_face = smile_face[:]
 sad_face[40:56] = sad_smile
 
 happy_smile = [
@@ -31,13 +31,15 @@ Y, Y, B, B, B, B, Y, Y,
 B, Y, Y, B, B, Y, Y, B,
 ]
 
-happy_face = smile_face
+happy_face = smile_face[:]
 happy_face[40:56] = happy_smile
 
 s1 = smileys.Smiley(smile_face)
-s1.setPattern(happy_face)
+s1.setPattern(sad_face)
 sense.set_pixels(s1.pattern)
 
+'''
 while True:
     sleep(1)
     sense.set_pixels()
+    '''
