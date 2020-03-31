@@ -37,9 +37,3 @@ happy_face[40:56] = happy_smile
 s1 = smileys.Smiley(smile_face)
 s1.setPattern(sad_face)
 sense.set_pixels(s1.pattern)
-
-'''
-while True:
-    sleep(1)
-    sense.set_pixels()
-    '''
